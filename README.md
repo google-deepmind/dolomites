@@ -1,30 +1,49 @@
-# dolomites
+# DoLoMiTes: Domain-Specific Long-Form Methodical Tasks
 
-TODO(b/332682183): Add a description for your new project, explain what is
-being released here, etc... Additional, the following sections are normally
-expected for all releases. Feel free to add additional sections if appropriate
-for your project.
+This repository includes data for the DoLoMiTes (Domain-Specific Long-Form
+Methodical Tasks) evaluation benchmark, described in [our paper](https://drive.google.com/file/d/1rQ6VEMbaS6L5DVJ1K-Le9OkJp1D2Rot3/view?usp=sharing&resourcekey=0-5O0KCfuDb1Kx_t7OMfsZJg) to be submitted to TACL 2024.
 
-## Installation
+## Abstract
+  Experts in various fields do methodical writing tasks in their profession to
+  plan, organize and report their work. These tasks all require methodically
+  generating a structured long-form output for a given input according to a
+  task description. From a clinician writing a differential diagnosis for a
+  patient, to a teacher writing a lesson plan for students, these tasks are
+  pervasive across domains. In this work, we study the extent to which large
+  language models can act as writing assistants for such domain-specific tasks.
+  Our work introduces a novel benchmark called DoLoMiTes (Domain-Specific
+  Long-Form Methodical Tasks) of more than 500 such domain-specific tasks
+  (i.e. instructions) elicited from hundreds of experts from across 25 fields.
+  These tasks represent real scenarios that experts tackle in various fields,
+  formatted in the form of a task objective, procedure, input and output.
+  Along with these tasks, we collect expert revisions of up to 10
+  model-generated examples of each task. Our benchmark proposes a challenging
+  long-form generation problem, as it requires performing complex inferences
+  while drawing upon the given context as well as domain knowledge. We hope
+  that the benchmark can be useful for evaluating models for long-form text
+  generation in novel domain-specific scenarios.
 
-Write instructions for how the user should install your code. The instructions
-should ideally be valid when copy-pasted. You can combine this with the Usage
-section if there's no separate installation step.
+## Data
 
-## Usage
-
-Write example usage of your code. The instructions should ideally be valid when
-copy-pasted, and will be used by your technical reviewer to verify that your
-package functions correctly.
+The benchmark data is available in JSONL format at: [link](link-to-GCP-bucket-tbd).
+This dataset contains 1857 examples split across 519 expert tasks.
+Documents have an average length of 590 words.
+Each example contains the following fields:
+  * "field": the field of the expert executing the task, e.g. economics,
+  * "task": instructions on how to perform the task, written by an expert,
+  * "original example": LLM generated example for a task,
+  * "edited example": original example revised by an expert in the field.
 
 ## Citing this work
 
-Add citation details here, usually a pastable BibTeX snippet:
+If you use any of the material here, please cite the following paper:
 
 ```latex
-@article{publicationname,
-      title={Publication Name},
-      author={Author One and Author Two and Author Three},
+@article{malaviya2024,
+      title={DoLoMiTes: Domain-Specific Long-Form Methodical Tasks},
+      author={Chaitanya Malaviya, Priyanka Agrawal, Kuzman Ganchev,
+              Pranesh Srinivasan, Fantine Huot,Mirella Lapata, Jonathan Berant,
+              Mark Yatskar, Chris Alberti},
       year={2024},
 }
 ```
