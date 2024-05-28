@@ -10,16 +10,8 @@ Methodical Tasks) evaluation benchmark, described in [our paper](https://arxiv.o
 
 The benchmark data is available in JSONL format at:
   * [Tasks](https://dolomites-benchmark.s3.us-west-2.amazonaws.com/dolomites_tasks_anon.jsonl): 519 task descriptions provided by experts.
-  * [Tasks Validation Labels](https://dolomites-benchmark.s3.us-west-2.amazonaws.com/dolomites_tasks_validation.latest.website.json): Labels for task validation provided by 3 independent experts.
+  * [Tasks Validation Labels](https://dolomites-benchmark.s3.us-west-2.amazonaws.com/dolomites_tasks_validation.latest.website.jsonl): Labels for task validation provided by 3 independent experts.
   * [Examples](https://dolomites-benchmark.s3.us-west-2.amazonaws.com/dolomites_examples.zip): Examples of the tasks post-edited by experts. We provide the development set (830 examples) **with** reference outputs and the test set (1037 examples) **without** reference outputs.
-
-This dataset contains 1857 examples split across 519 expert tasks.
-Documents have an average length of 590 words.
-Each example contains the following fields:
-  * "field": the field of the expert executing the task, e.g. economics,
-  * "task": instructions on how to perform the task, written by an expert,
-  * "original example": LLM generated example for a task,
-  * "edited example": original example revised by an expert in the field.
 
 ## Citing this work
 
